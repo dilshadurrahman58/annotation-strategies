@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Annotation Strategies in Professional Visualizations</title>
+  <meta name="description"
+    content="A strategy-indexed companion to the paper: Exploring Annotation Strategies in Professional Visualizations — Insights from Prominent US News Portals." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Crimson+Text:wght@400;600;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="dark">
+  <a class="skip-link" href="#strategies">Skip to main content</a>
+  <div class="ambient" aria-hidden="true"></div>
+
+  <header class="top">
+    <div class="top__inner">
+      <div class="top__title">
+        <p class="top__venue">IEEE VIS Workshop on Visualization for Communication (VisComm 2023)</p>
+        <h1>Annotation Strategies in Professional Visualizations</h1>
+        <p class="top__authors"><strong>Md Dilshadur Rahman</strong>, Ghulam Quadri Jilani, Paul Rosen</p>
+      </div>
+      <div class="top__actions">
+        <a class="btn btn--solid" href="https://doi.org/10.31219/osf.io/fd8zj" target="_blank" rel="noopener">Read
+          Paper</a>
+        <a class="btn" href="https://vis-annotations.github.io/annotation-design/" target="_blank"
+          rel="noopener">Related Site</a>
+        <button class="theme-toggle" id="themeToggle" type="button" role="switch" aria-checked="false"
+          aria-label="Switch to light mode">
+          <span class="theme-toggle__track" aria-hidden="true">
+            <span class="theme-toggle__thumb">
+              <svg class="theme-ico theme-ico--moon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg class="theme-ico theme-ico--sun" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
+                aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+              </svg>
+            </span>
+          </span>
+        </button>
+      </div>
+      <nav class="top__nav" aria-label="Page sections">
+        <a href="#strategies">Strategies</a>
+        <a href="#examples">Examples</a>
+        <a href="#citation">Citation</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <section class="hero reveal">
+      <div class="hero__left">
+        <h2>Five annotation strategies recurring across 72 professional news charts.</h2>
+        <p>
+          This site provides a strategy-indexed companion to
+          <em>Exploring Annotation Strategies in Professional Visualizations: Insights from Prominent US News
+            Portals</em>.
+          It presents each of the five strategies (<code>S1</code>&ndash;<code>S5</code>) identified in the paper
+          alongside the figures used to illustrate them, with per-figure annotation analysis.
+        </p>
+      </div>
+      <div class="hero__stats" id="heroStats"></div>
+    </section>
+
+    <section class="section reveal" id="strategies">
+      <div class="sec-head">
+        <h3>Five Annotation Strategies</h3>
+        <p>
+          Five recurring strategies identified through qualitative analysis of static charts from
+          The New York Times, The Washington Post, The Wall Street Journal, and The Economist.
+          <span class="highlight-call">Select a card</span> to read the full strategy discussion and a representative
+          example.
+        </p>
+      </div>
+      <div class="strategy-grid" id="strategyGrid"></div>
+    </section>
+
+    <section class="section reveal" id="examples">
+      <div class="sec-head">
+        <h3>Professional Examples from News Portals</h3>
+        <p>
+          The nine figures discussed in the paper, each annotated with the strategies they exemplify.
+          Use the filters below to explore by strategy, publication, or chart type.
+          Select <em>See Details</em> to read the full per-figure annotation analysis.
+        </p>
+      </div>
+
+      <div class="filter-wrap">
+        <div>
+          <p class="filter-title">Filter by Strategy</p>
+          <div class="chip-row" id="paperStrategyFilters"></div>
+        </div>
+        <div>
+          <p class="filter-title">Filter by Publication</p>
+          <div class="chip-row" id="paperSourceFilters"></div>
+        </div>
+        <div>
+          <p class="filter-title">Filter by Chart Type</p>
+          <div class="chip-row" id="paperTypeFilters"></div>
+        </div>
+      </div>
+
+      <div class="filter-actions">
+        <button class="btn btn--compact" id="clearFiltersBtn" type="button" disabled>Clear all filters</button>
+      </div>
+
+      <p class="meta-line" id="paperStats"></p>
+      <div class="paper-grid" id="paperGrid"></div>
+    </section>
+
+    <section class="section reveal" id="citation">
+      <div class="sec-head">
+        <h3>Reference</h3>
+      </div>
+      <div class="citation-block">
+        <p class="citation-text">
+          Rahman, D., Quadri, G. J., and Rosen, P. (2023).
+          Exploring Annotation Strategies in Professional Visualizations: Insights from Prominent US News Portals.
+          <em>Open Science Framework Preprint.</em>
+          <a href="https://doi.org/10.31219/osf.io/fd8zj" target="_blank"
+            rel="noopener">https://doi.org/10.31219/osf.io/fd8zj</a>
+        </p>
+        <div class="citation-actions">
+          <button class="btn" id="copyBibtexBtn" type="button">Copy BibTeX</button>
+          <span id="copyBibtexMsg" class="meta-line" aria-live="polite" style="margin:0"></span>
+        </div>
+        <pre class="bibtex" id="bibtex">@article{rahman2023annotationstrategies,
+  title   = {Exploring Annotation Strategies in Professional Visualizations: Insights from Prominent US News Portals},
+  author  = {Rahman, Dilshadur and Quadri, Ghulam Jilani and Rosen, Paul},
+  year    = {2023},
+  journal = {IEEE VIS Workshop on Visualization for Communication (VisComm)},
+  doi     = {10.31219/osf.io/fd8zj},
+  url     = {https://osf.io/fd8zj_v1}
+}</pre>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="drawer" hidden aria-modal="true" role="dialog" aria-labelledby="drawerTitle">
+    <div class="drawer__head">
+      <div>
+        <p class="drawer__meta" id="drawerMeta"></p>
+        <h4 id="drawerTitle"></h4>
+      </div>
+      <button class="btn btn--icon" id="drawerClose" aria-label="Close panel">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <div class="drawer__body" id="drawerBody"></div>
+  </aside>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script src="script.js" defer></script>
+
+</body>
+
+</html>
